@@ -23,6 +23,8 @@
     <main class="bordure-noire">
         <h2>Contenu principal</h2>
 
+        <p> Ci dessous un formulaire de type post</p>
+
         <form method="post" action="backend/mon-traitement">
             <p>
                 <label for="nom">Nom</label>
@@ -32,11 +34,50 @@
         </form>
 
 
-        <p class="texte-bleu">Voici l'article principal de la page.</p>
+        <p>Voici le formulaire de type get ci dessous.</p>
+        
+        <form method="get" action="backend/get-traitement">
+            <p>
+                <label for="recherche">Recherche</label>
+                <input type="text" name="recherche" id="recherche" placeholder="Votre recherche..." required />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p>Test Test Test Test</p>
+        <p>Ci dessous des formulaires de saisies limités en taille</p>
+
+        <form method="post" action="backend/traitement">
+            <p>
+            <label for="champ-limite">Saisie limitée :</label>
+            <input type="text" 
+               name="champ-limite" 
+               id="champ-limite" 
+               placeholder="25 caractères max" 
+               required 
+               maxlength="25" />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>
         <aside class="padding-10">
         </aside>
-        <p>Test Test Test Test</p>
-        <p>Test Test Test Test</p>
+
+        <form method="post" action="backend/traitement">
+            <p>
+            <label for="champ-calibre">Votre saisie (15 à 30 caractères) :</label>
+            <input type="text" 
+               name="champ-calibre" 
+               id="champ-calibre" 
+               placeholder="15 à 30 caractères" 
+               required 
+               minlength="15" 
+               maxlength="30" />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <aside class="padding-10">
+        </aside>
+
     </main>
 
     <div class="ma-boite">
