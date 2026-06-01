@@ -78,6 +78,56 @@
         <aside class="padding-10">
         </aside>
 
+        <p> Ci dessous le formulaire avec un champ password limité à 25 caractères</p>    
+        <form method="post" action="backend/traitement">
+            <p>
+            <label for="password">Mot de passe :</label>
+            <input type="password" 
+               name="password" 
+               id="password" 
+               placeholder="25 caractères maximum" 
+               required 
+               maxlength="25" />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>
+        <aside class="padding-10">
+        </aside>
+
+        <p> Ci dessous le formulaire avec un champ number minimum de 10</p> 
+        <form method="post" action="backend/traitement">
+            <p>
+            <label for="selection-nombre">Nombre (minimum 10) :</label><br />
+            <input type="number" 
+               name="selection-nombre" 
+               id="selection-nombre" 
+               placeholder="Entrez un nombre" 
+               required 
+               min="10" />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>  
+
+        <aside class="padding-10">
+        </aside>
+
+        <p> Ci dessous le formulaire avec un champ number max de 15</p>
+        <form method="post" action="backend/traitement">
+            <p>
+            <label for="choix-nombre">Nombre (maximum 15) :</label><br />
+            <input type="number" 
+               name="choix-nombre" 
+               id="choix-nombre" 
+               placeholder="Max 15" 
+               required 
+               max="15" />
+            </p>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <aside class="padding-10">
+        </aside>
+
     </main>
 
     <div class="ma-boite">
