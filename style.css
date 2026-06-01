@@ -1,4 +1,4 @@
-p {
+/*p {
     color: yellow;           
     background-color: lightgray;  
 }
@@ -6,6 +6,7 @@ p {
     color: red;           
     font-weight: bold;    
 }
+*/
 .bordure-noire {
     border: 3px solid black;
 }
