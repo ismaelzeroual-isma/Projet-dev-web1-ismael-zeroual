@@ -399,7 +399,8 @@ section {
     border: 2px solid transparent;
     transition: border-color 0.2s, transform 0.2s;
 }
-
+/* Note : On met la transition sur l'élément et le transform sur le hover. Car sinon, dès qu'on enlève sa souris, la transformation
+disparait super vite puisque la transition est reliée au survol */
 .offer-card:hover {
     border-color: var(--purple);
     transform: translateY(-4px);
