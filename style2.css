@@ -1,3 +1,14 @@
+:root {
+    --white:        #ffffff;
+    --text:         #1a1a2e;
+    --gray:         #555555;
+    --light-bg:     #f9f9fb;
+    --purple:       #6b21c8;
+    --purple-light: #7c3aed;
+    --red:          #f44336;
+    --radius:       8px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,15 +16,16 @@
     box-sizing: border-box;
 
 }
-
-.header{
+/*
+header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.2)),url(img/banniere.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.2)),url(img/banniere2.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
+    */
 nav{
     display: flex;
     padding: 2% 6%;
@@ -21,7 +33,7 @@ nav{
     align-items: center;
 }
 nav img{
-    width: 150 px; 
+    width: 150px; 
 }
 .nav-links{
     flex: 1;
@@ -46,7 +58,7 @@ height: 2px;
 background: #f44336;;
 display: block;
 margin: auto;
-transition: 0.5;
+transition: width 0.3s;
 
 }
 .nav-links ul li:hover::after{
@@ -58,7 +70,7 @@ transition: 0.5;
   min-height: 92vh;
   background:
     linear-gradient(to right, rgba(4, 9, 30, .72) 40%, rgba(4, 9, 30, .25) 100%),
-    url('img/banniere.jpg') center / cover no-repeat;
+    url('img/hero1.jpg') center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 60px 6%;
@@ -161,7 +173,7 @@ transition: 0.5;
     resize: vertical;
     min-height: 70px;
 }
-
+/*
 .captcha-row {
     display: flex;
     align-items: center;
@@ -183,7 +195,7 @@ transition: 0.5;
     font-size: 13px;
     flex-shrink: 0;
 }
-
+*/
 
 .btn-primary {
     display: flex;
