@@ -291,7 +291,7 @@ section {
 }*/
 
 section {
-    padding: 80px 6%;
+    padding: 80px 6%; /*  on utilise cette notation pour fixer la taille verticalement, mais permettre aux éléments de s'adapter à la largeur du contenur*/
 }
 
 .section-white {
@@ -337,7 +337,7 @@ section {
     width: 100%;
     border-radius: 10px;
     display: block;
-    object-fit: cover;
+    object-fit: cover; /*  Permet de redimensionner les images pour qu'elle remplisse leur conteneur en conservant leur ratio*/
     max-height: 380px;
 }
 
@@ -368,7 +368,7 @@ section {
     font-weight: 600;
     color: var(--text);
     text-decoration: none;
-    transition: background .2s, color .2s;
+    transition: background .2s, color .2s;/*  On transitionne le background et la couleur de l'élément en même temps*/
 }
 
 .btn-outline:hover {
