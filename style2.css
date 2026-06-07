@@ -32,6 +32,13 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+/*je rajoute ça pour mettre le texte en dessous du logo, sinon c'est en inline*/
+.logo-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
 nav img{
     width: 150px; 
 }
@@ -64,6 +71,18 @@ transition: width 0.3s;
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
+.logo-text {
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.logo-orange {
+    color: orange;
+}
 /* ******************************************************************************************************/
 .hero {
   position: relative;
@@ -94,6 +113,44 @@ transition: width 0.3s;
   color: var(--white);
   line-height: 1.2;
   margin-bottom: 20px;
+}
+.liste-services {
+    list-style: none;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.liste-services li {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+    position: relative;
+}
+.liste-services li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: orange;
+}
+/***********************************************************************************/
+
+.hero-small {
+    min-height: 30vh;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+
+.hero-small .hero-text {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-top: 8px;
 }
 
 /************************************************************************************/
@@ -318,6 +375,202 @@ section {
     background: var(--text);
     color: var(--white);
 }
+
+/* fichier offres***************************************************************************/
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 36px 28px;
+    flex: 1;
+    min-width: 240px;
+    max-width: 320px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.offer-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-4px);
+}
+
+.offer-card-featured {
+    border-color: var(--purple);
+    transform: translateY(-8px);
+}
+
+.card-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--purple-light), var(--purple));
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 50px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.card-tagline {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.card-price {
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
+}
+
+.price-amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--purple);
+}
+
+.price-unit {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.card-features li {
+    font-size: 13px;
+    color: var(--text);
+}
+
+.card-features .feature-disabled {
+    color: #bbb;
+}
+/* page description**********************************************************************/
+.values-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.value-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 30px 24px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 260px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.value-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.value-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.value-card p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+/* description -> mise en forme membres de l'équipe*/
+
+.team-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 30px 24px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    text-align: center;
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 16px;
+    border: 3px solid var(--purple);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-size: 13px;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
 /*le Footer****************************************************************************/
 
 footer {
