@@ -7,7 +7,7 @@
     --purple-light: #7c3aed;
     --red:          #f44336;
     --radius:       8px;
-}
+}/*les variables sont déclarées avec les deux -- */
 
 *{
     margin: 0;
@@ -28,7 +28,7 @@ header{
     */
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 2% 6%; /* cette notation permet de définir le padding plus rapidement. La première valeur c'est padding haut et bas et la 2ème c'est gauche et droite*/
     justify-content: space-between;
     align-items: center;
 }
@@ -43,7 +43,7 @@ nav img{
     width: 150px; 
 }
 .nav-links{
-    flex: 1;
+    flex: 1; /* cette notation est encore un raccourci de ; flex-grow: 1(Ca permet à l'élément de s'aggrandir et d'occuper tout l'espace disponible.), flex-shrink: 1(l’élément peut se rétrécir si l’espace vient à manquer), flex-basis: 0%(la taille de base de l’élément est 0 avant répartition de l’espace libre. Cela force les éléments à s’ajuster uniquement en fonction de flex-grow).*/ 
     text-align: right;
 }
 .nav-links ul li{
@@ -55,7 +55,7 @@ nav img{
 .nav-links ul li a{
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .nav-links ul li::after{
@@ -65,7 +65,7 @@ height: 2px;
 background: #f44336;;
 display: block;
 margin: auto;
-transition: width 0.3s;
+transition: width 0.3s; /* ici on met width pour lui dire que c'est la largeur de l'élément qui va jouer"*/
 
 }
 .nav-links ul li:hover::after{
@@ -86,7 +86,7 @@ transition: width 0.3s;
 /* ******************************************************************************************************/
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 92vh; /*1 vh correspond à 1% du viewport. si la fenêtre du navigateur fait 800px, 1 vh est donc égal à 8px  */
   background:
     linear-gradient(to right, rgba(4, 9, 30, .72) 40%, rgba(4, 9, 30, .25) 100%),
     url('img/hero1.jpg') center / cover no-repeat;
@@ -108,7 +108,7 @@ transition: width 0.3s;
   max-width: 1000px;
 }
 .hero-text h1 {
-  font-size: clamp(26px, 3.5vw, 42px);
+  font-size: clamp(26px, 3.5vw, 42px); /* clamp permet de définir des valeurs min, max et idéale dans un but d'avoir le texte responsibe*/
   font-weight: 800;
   color: var(--white);
   line-height: 1.2;
@@ -161,7 +161,7 @@ transition: width 0.3s;
     padding: 32px 30px 24px;
     width: 340px;
     flex-shrink: 0;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, .2); /* pour l'ombre portée, le premier nombre indique que il n'y a pas de décalage à gauche ou à droite*/
 }
 
 .contact-card h2 {
@@ -184,7 +184,7 @@ transition: width 0.3s;
     border: 1px solid #ddd;
     border-radius: var(--radius);
     padding: 10px 12px;
-    font-family: inherit;
+    font-family: inherit; /* force un élément à hériter de la police de l'élément parent et à ne pas utiliser sa propre police*/
     font-size: 13px;
     color: var(--text);
     outline: none;
@@ -216,7 +216,7 @@ transition: width 0.3s;
     font-size: 12px;
     color: #444;
     border-right: 1px solid #ddd;
-    white-space: nowrap;
+    white-space: nowrap;/* empêche le texte de passer à la ligne lorsqu’il atteint le bord de son conteneur.*/
 }
 
 .phone-row input {
@@ -569,6 +569,33 @@ section {
     font-size: 13px;
     color: var(--gray);
     line-height: 1.6;
+}
+
+/* Pour la page ressources**********************************************************************/
+.container-video{
+    padding: 60px 6%;
+    background: var(--light-bg);
+    
+}
+.grid-video {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contour-video{
+ flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+}
+.contour-video iframe {
+    width: 100%;
+    height: 220px;
+    display: block;
 }
 
 /*le Footer****************************************************************************/
